@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }} - Collezione Etichette Birra</title>
+  <!-- Usiamo il percorso assoluto /style.css così funziona in tutte le sottocartelle -->
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    body {
+      /* Sfondo dinamico basato sulla nazione */
+      background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('/immagini/nazioni/{{ page.nazione_slug }}.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      color: white;
+    }
+    .header-nazione {
+      text-align: center;
+      padding: 50px 20px;
+    }
+    .bandiera-grande {
+      width: 80px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header-nazione">
+    <a href="/" style="color: #ffcc00; text-decoration: none;">← Torna all'archivio completo</a>
+    <br><br>
+    <img src="/immagini/bandiere/{{ page.nazione_slug }}.png" class="bandiera-grande" alt="">
+    <h1>{{ page.title }}</h1>
+    <p>Etichette di birra dalla collezione: {{ page.title }}</p>
+  </div>
+
+  <div class="container" style="max-width: 1000px; margin: 0 auto; padding: 20px; background: rgba(0,0,0,0.7); border-radius: 10px;">
+    <!-- Qui Jekyll inserirà il contenuto specifico della nazione -->
+    {{ content }}
+  </div>
+
+</body>
+</html>
