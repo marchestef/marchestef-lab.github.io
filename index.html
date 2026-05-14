@@ -49,9 +49,10 @@ const title = document.getElementById("title");
 function showHome() {
   title.innerText = "🍺 Collezione Etichette Birra";
 
- grid.innerHTML = Object.keys(data).map(country => `
+ grid.innerHTML = countries.map(country => `
 
-  <div class="country-card" onclick="showCountry('${country}')">
+  <a class="country-card"
+     href="${country}/index.html">
 
     <img src="img/${country.toLowerCase()}.jpg"
          alt="${country}">
@@ -62,7 +63,7 @@ function showHome() {
 
     <div class="country-name">${country}</div>
 
-  </div>
+  </a>
 
 `).join("");
 
