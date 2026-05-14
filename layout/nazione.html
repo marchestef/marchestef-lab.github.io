@@ -1,0 +1,49 @@
+---
+layout: default
+---
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page.title }} - Collezione Etichette Birra</title>
+    <!-- Usa lo slash iniziale per trovare il CSS da ogni sottocartella -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">BIRRA COLLEZIONE</div>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/informazioni">Info</a>
+    </nav>
+</header>
+
+<!-- Riutilizziamo la tua classe HERO per la singola nazione -->
+<div class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/immagini/nazioni/{{ page.nazione_slug }}.jpg');">
+    <div class="hero-content">
+        <img src="/immagini/bandiere/{{ page.nazione_slug }}.png" style="width: 60px; margin-bottom: 10px; border-radius: 4px;">
+        <h1>{{ page.title }}</h1>
+        <p>Archivio etichette: {{ page.title }}</p>
+    </div>
+</div>
+
+<main>
+    <div class="section-title">Le mie Etichette</div>
+    
+    <!-- Contenitore per le tue foto delle birre -->
+    <div class="etichette-gallery">
+        {{ content }}
+    </div>
+    
+    <a href="/" style="color: #f0b400; text-decoration: none; font-weight: bold; display: block; margin-top: 40px;">
+        ← Torna alla lista nazioni
+    </a>
+</main>
+
+<footer>
+    <p>© 2026 Collezione Etichette Birra - Marchestef Lab</p>
+</footer>
+
+</body>
+</html>
