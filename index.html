@@ -26,18 +26,45 @@ const data = {
   "USA": ["Budweiser", "Coors"]
 };
 
+
+function getFlagCode(country) {
+
+  const flags = {
+    "Italia": "it",
+    "Germania": "de",
+    "Francia": "fr",
+    "Giappone": "jp",
+    "USA": "us",
+    "Spagna": "es",
+    "Regno Unito": "gb",
+    "Canada": "ca",
+    "Belgio": "be"
+  };
+
+  return flags[country] || "un";
+}
 const grid = document.getElementById("grid");
 const title = document.getElementById("title");
 
 function showHome() {
   title.innerText = "🍺 Collezione Etichette Birra";
 
-  grid.innerHTML = Object.keys(data).map(country => `
-    <div class="country-card" onclick="showCountry('${country}')">
-      <div class="country-name">${country}</div>
-    </div>
-  `).join("");
-}
+ grid.innerHTML = Object.keys(data).map(country => `
+
+  <div class="country-card" onclick="showCountry('${country}')">
+
+    <img src="img/${country.toLowerCase()}.jpg"
+         alt="${country}">
+
+    <img class="flag"
+         src="https://flagcdn.com/w40/${getFlagCode(country)}.png"
+         alt="${country}">
+
+    <div class="country-name">${country}</div>
+
+  </div>
+
+`).join("");
 
 function showCountry(country) {
   title.innerText = country;
