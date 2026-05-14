@@ -179,3 +179,185 @@ footer {
         padding: 30px;
     }
 }
+
+.country-card {
+
+    position: relative;
+
+    background-size: cover;
+    background-position: center;
+
+    overflow: hidden;
+}
+
+/* overlay scuro */
+
+.country-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0,0,0,0.45);
+}
+
+/* testo sopra immagine */
+
+.country-name {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+/* immagini nazioni */
+
+.afghanistan { background-image: url("immagini/nazioni/afghanistan.jpg"); }
+.albania { background-image: url("immagini/nazioni/albania.jpg"); }
+.algeria { background-image: url("immagini/nazioni/algeria.jpg"); }
+.andorra { background-image: url("immagini/nazioni/andorra.jpg"); }
+.angola { background-image: url("immagini/nazioni/angola.jpg"); }
+.antigua { background-image: url("immagini/nazioni/antigua.jpg"); }
+.saudiarabia { background-image: url("immagini/nazioni/arabia_saudita.jpg"); }
+.argentina { background-image: url("immagini/nazioni/argentina.jpg"); }
+.armenia { background-image: url("immagini/nazioni/armenia.jpg"); }
+.australia { background-image: url("immagini/nazioni/australia.jpg"); }
+.austria { background-image: url("immagini/nazioni/austria.jpg"); }
+.azerbaijan { background-image: url("immagini/nazioni/azerbaigian.jpg"); }
+
+.bahamas { background-image: url("immagini/nazioni/bahamas.jpg"); }
+.bahrain { background-image: url("immagini/nazioni/bahrein.jpg"); }
+.bangladesh { background-image: url("immagini/nazioni/bangladesh.jpg"); }
+.barbados { background-image: url("immagini/nazioni/barbados.jpg"); }
+.belgium { background-image: url("immagini/nazioni/belgio.jpg"); }
+.belize { background-image: url("immagini/nazioni/belize.jpg"); }
+.benin { background-image: url("immagini/nazioni/benin.jpg"); }
+.bhutan { background-image: url("immagini/nazioni/bhutan.jpg"); }
+.belarus { background-image: url("immagini/nazioni/bielorussia.jpg"); }
+.bolivia { background-image: url("immagini/nazioni/bolivia.jpg"); }
+.bosnia { background-image: url("immagini/nazioni/bosnia.jpg"); }
+.botswana { background-image: url("immagini/nazioni/botswana.jpg"); }
+.brazil { background-image: url("immagini/nazioni/brasile.jpg"); }
+.brunei { background-image: url("immagini/nazioni/brunei.jpg"); }
+.bulgaria { background-image: url("immagini/nazioni/bulgaria.jpg"); }
+.burkinafaso { background-image: url("immagini/nazioni/burkina_faso.jpg"); }
+.burundi { background-image: url("immagini/nazioni/burundi.jpg"); }
+
+.cambodia { background-image: url("immagini/nazioni/cambogia.jpg"); }
+.cameroon { background-image: url("immagini/nazioni/camerun.jpg"); }
+.canada { background-image: url("immagini/nazioni/canada.jpg"); }
+.capeverde { background-image: url("immagini/nazioni/capo_verde.jpg"); }
+.chad { background-image: url("immagini/nazioni/ciad.jpg"); }
+.chile { background-image: url("immagini/nazioni/cile.jpg"); }
+.china { background-image: url("immagini/nazioni/cina.jpg"); }
+.cyprus { background-image: url("immagini/nazioni/cipro.jpg"); }
+.colombia { background-image: url("immagini/nazioni/colombia.jpg"); }
+.southkorea { background-image: url("immagini/nazioni/corea_del_sud.jpg"); }
+.northkorea { background-image: url("immagini/nazioni/corea_del_nord.jpg"); }
+.costarica { background-image: url("immagini/nazioni/costa_rica.jpg"); }
+.croatia { background-image: url("immagini/nazioni/croazia.jpg"); }
+.cuba { background-image: url("immagini/nazioni/cuba.jpg"); }
+
+.denmark { background-image: url("immagini/nazioni/danimarca.jpg"); }
+
+.ecuador { background-image: url("immagini/nazioni/ecuador.jpg"); }
+.egypt { background-image: url("immagini/nazioni/egitto.jpg"); }
+.elsalvador { background-image: url("immagini/nazioni/el_salvador.jpg"); }
+.uae { background-image: url("immagini/nazioni/emirati_arabi_uniti.jpg"); }
+.estonia { background-image: url("immagini/nazioni/estonia.jpg"); }
+.ethiopia { background-image: url("immagini/nazioni/etiopia.jpg"); }
+
+.philippines { background-image: url("immagini/nazioni/filippine.jpg"); }
+.finland { background-image: url("immagini/nazioni/finlandia.jpg"); }
+.france { background-image: url("immagini/nazioni/francia.jpg"); }
+
+.gabon { background-image: url("immagini/nazioni/gabon.jpg"); }
+.gambia { background-image: url("immagini/nazioni/gambia.jpg"); }
+.georgia { background-image: url("immagini/nazioni/georgia.jpg"); }
+.germany { background-image: url("immagini/nazioni/germania.jpg"); }
+.japan { background-image: url("immagini/nazioni/giappone.jpg"); }
+.jordan { background-image: url("immagini/nazioni/giordania.jpg"); }
+.greece { background-image: url("immagini/nazioni/grecia.jpg"); }
+
+.india { background-image: url("immagini/nazioni/india.jpg"); }
+.indonesia { background-image: url("immagini/nazioni/indonesia.jpg"); }
+.iran { background-image: url("immagini/nazioni/iran.jpg"); }
+.iraq { background-image: url("immagini/nazioni/iraq.jpg"); }
+.ireland { background-image: url("immagini/nazioni/irlanda.jpg"); }
+.iceland { background-image: url("immagini/nazioni/islanda.jpg"); }
+.israel { background-image: url("immagini/nazioni/israele.jpg"); }
+.italy { background-image: url("immagini/nazioni/italia.jpg"); }
+
+.jamaica { background-image: url("immagini/nazioni/giamaica.jpg"); }
+
+.kazakhstan { background-image: url("immagini/nazioni/kazakistan.jpg"); }
+.kenya { background-image: url("immagini/nazioni/kenya.jpg"); }
+.kuwait { background-image: url("immagini/nazioni/kuwait.jpg"); }
+
+.laos { background-image: url("immagini/nazioni/laos.jpg"); }
+.latvia { background-image: url("immagini/nazioni/lettonia.jpg"); }
+.lebanon { background-image: url("immagini/nazioni/libano.jpg"); }
+.libya { background-image: url("immagini/nazioni/libia.jpg"); }
+.liechtenstein { background-image: url("immagini/nazioni/liechtenstein.jpg"); }
+.lithuania { background-image: url("immagini/nazioni/lituania.jpg"); }
+.luxembourg { background-image: url("immagini/nazioni/lussemburgo.jpg"); }
+
+.madagascar { background-image: url("immagini/nazioni/madagascar.jpg"); }
+.malaysia { background-image: url("immagini/nazioni/malesia.jpg"); }
+.mali { background-image: url("immagini/nazioni/mali.jpg"); }
+.malta { background-image: url("immagini/nazioni/malta.jpg"); }
+.morocco { background-image: url("immagini/nazioni/marocco.jpg"); }
+.mexico { background-image: url("immagini/nazioni/messico.jpg"); }
+.moldova { background-image: url("immagini/nazioni/moldavia.jpg"); }
+.monaco { background-image: url("immagini/nazioni/monaco.jpg"); }
+.mongolia { background-image: url("immagini/nazioni/mongolia.jpg"); }
+
+.namibia { background-image: url("immagini/nazioni/namibia.jpg"); }
+.nepal { background-image: url("immagini/nazioni/nepal.jpg"); }
+.nicaragua { background-image: url("immagini/nazioni/nicaragua.jpg"); }
+.nigeria { background-image: url("immagini/nazioni/nigeria.jpg"); }
+.norway { background-image: url("immagini/nazioni/norvegia.jpg"); }
+.newzealand { background-image: url("immagini/nazioni/nuova_zelanda.jpg"); }
+
+.netherlands { background-image: url("immagini/nazioni/olanda.jpg"); }
+
+.pakistan { background-image: url("immagini/nazioni/pakistan.jpg"); }
+.panama { background-image: url("immagini/nazioni/panama.jpg"); }
+.paraguay { background-image: url("immagini/nazioni/paraguay.jpg"); }
+.peru { background-image: url("immagini/nazioni/peru.jpg"); }
+.poland { background-image: url("immagini/nazioni/polonia.jpg"); }
+.portugal { background-image: url("immagini/nazioni/portogallo.jpg"); }
+
+.qatar { background-image: url("immagini/nazioni/qatar.jpg"); }
+
+.uk { background-image: url("immagini/nazioni/regno_unito.jpg"); }
+.czechrepublic { background-image: url("immagini/nazioni/repubblica_ceca.jpg"); }
+.romania { background-image: url("immagini/nazioni/romania.jpg"); }
+.russia { background-image: url("immagini/nazioni/russia.jpg"); }
+
+.sanmarino { background-image: url("immagini/nazioni/san_marino.jpg"); }
+.singapore { background-image: url("immagini/nazioni/singapore.jpg"); }
+.slovakia { background-image: url("immagini/nazioni/slovacchia.jpg"); }
+.slovenia { background-image: url("immagini/nazioni/slovenia.jpg"); }
+.spain { background-image: url("immagini/nazioni/spagna.jpg"); }
+.usa { background-image: url("immagini/nazioni/stati_uniti.jpg"); }
+.sweden { background-image: url("immagini/nazioni/svezia.jpg"); }
+.switzerland { background-image: url("immagini/nazioni/svizzera.jpg"); }
+
+.thailand { background-image: url("immagini/nazioni/thailandia.jpg"); }
+.tunisia { background-image: url("immagini/nazioni/tunisia.jpg"); }
+.turkey { background-image: url("immagini/nazioni/turchia.jpg"); }
+
+.ukraine { background-image: url("immagini/nazioni/ucraina.jpg"); }
+.hungary { background-image: url("immagini/nazioni/ungheria.jpg"); }
+.uruguay { background-image: url("immagini/nazioni/uruguay.jpg"); }
+
+.venezuela { background-image: url("immagini/nazioni/venezuela.jpg"); }
+.vietnam { background-image: url("immagini/nazioni/vietnam.jpg"); }
+
+.yemen { background-image: url("immagini/nazioni/yemen.jpg"); }
+
+.zambia { background-image: url("immagini/nazioni/zambia.jpg"); }
+.zimbabwe { background-image: url("immagini/nazioni/zimbabwe.jpg"); }
