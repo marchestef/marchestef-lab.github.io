@@ -1,12 +1,18 @@
 ﻿---
-layout: nazione
-title: "Afghanistan"
-nazione_slug: "afghanistan"
+layout: default
 ---
-
-<h3>Le mie etichette</h3>
-<div class="etichette-grid">
-  <!-- Qui metterai le tue foto delle etichette -->
-  <img src="etichetta1.jpg" width="200">
-  <img src="etichetta2.jpg" width="200">
+<!-- HERO della Nazione -->
+<div class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/immagini/nazioni/{{ page.nazione_slug }}.jpg');">
+    <div class="hero-content">
+        <h1>{{ page.title }}</h1>
+        <p>Seleziona un birrificio per vedere le etichette</p>
+    </div>
 </div>
+
+<main>
+    <div class="section-title">Birrifici in {{ page.title }}</div>
+    <div class="countries-grid">
+        <!-- Questo codice elenca automaticamente le sottocartelle (birrifici) -->
+        {{ content }}
+    </div>
+</main>
