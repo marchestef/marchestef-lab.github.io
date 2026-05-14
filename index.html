@@ -1,88 +1,360 @@
+
 <!DOCTYPE html>
 <html lang="it">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Collezione Birre</title>
+
+  <title>Collezione Etichette Birra</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<h1 id="title">🍺 Collezione Etichette Birra</h1>
+<h1>🍺 Collezione Etichette Birra</h1>
 
-<p>Archivio mondiale di etichette birra</p>
+<div class="card-grid">
 
-<div id="grid" class="card-grid"></div>
+ <a class="country-card" href="Argentina/index.html">
+  <div class="country-name">Argentina</div>
+</a>
 
-<script>
-const data = {
-  "Italia": ["Moretti", "Peroni"],
-  "Germania": ["Becks", "Warsteiner"],
-  "Francia": ["Kronenbourg"],
-  "Giappone": ["Asahi", "Sapporo"],
-  "USA": ["Budweiser", "Coors"]
-};
+<a class="country-card" href="Australia/index.html">
+  <div class="country-name">Australia</div>
+</a>
 
+<a class="country-card" href="Austria/index.html">
+  <div class="country-name">Austria</div>
+</a>
 
-function getFlagCode(country) {
+<a class="country-card" href="Bahamas/index.html">
+  <div class="country-name">Bahamas</div>
+</a>
 
-  const flags = {
-    "Italia": "it",
-    "Germania": "de",
-    "Francia": "fr",
-    "Giappone": "jp",
-    "USA": "us",
-    "Spagna": "es",
-    "Regno Unito": "gb",
-    "Canada": "ca",
-    "Belgio": "be"
-  };
+<a class="country-card" href="Belgio/index.html">
+  <div class="country-name">Belgio</div>
+</a>
 
-  return flags[country] || "un";
-}
-const grid = document.getElementById("grid");
-const title = document.getElementById("title");
+<a class="country-card" href="Bielorussia/index.html">
+  <div class="country-name">Bielorussia</div>
+</a>
 
-function showHome() {
-  title.innerText = "🍺 Collezione Etichette Birra";
+<a class="country-card" href="Bosnia_Herzegovina/index.html">
+  <div class="country-name">Bosnia Herzegovina</div>
+</a>
 
- grid.innerHTML = countries.map(country => `
+<a class="country-card" href="Brasile/index.html">
+  <div class="country-name">Brasile</div>
+</a>
 
-  <a class="country-card"
-     href="${country}/index.html">
+<a class="country-card" href="Bulgaria/index.html">
+  <div class="country-name">Bulgaria</div>
+</a>
 
-    <img src="img/${country.toLowerCase()}.jpg"
-         alt="${country}">
+<a class="country-card" href="Camerun/index.html">
+  <div class="country-name">Camerun</div>
+</a>
 
-    <img class="flag"
-         src="https://flagcdn.com/w40/${getFlagCode(country)}.png"
-         alt="${country}">
+<a class="country-card" href="Canada/index.html">
+  <div class="country-name">Canada</div>
+</a>
 
-    <div class="country-name">${country}</div>
+<a class="country-card" href="Chile/index.html">
+  <div class="country-name">Cile</div>
+</a>
 
-  </a>
+<a class="country-card" href="Cina/index.html">
+  <div class="country-name">Cina</div>
+</a>
 
-`).join("");
+<a class="country-card" href="Corea_del_Sud/index.html">
+  <div class="country-name">Corea del Sud</div>
+</a>
 
-function showCountry(country) {
-  title.innerText = country;
+<a class="country-card" href="Croazia/index.html">
+  <div class="country-name">Croazia</div>
+</a>
 
-  const list = data[country];
+<a class="country-card" href="Cuba/index.html">
+  <div class="country-name">Cuba</div>
+</a>
 
-  grid.innerHTML = `
-    <button class="button" onclick="showHome()">⬅ Torna indietro</button>
-  ` + list.map(b => `
-    <div class="country-card">
-      <div class="country-name">${b}</div>
-    </div>
-  `).join("");
-}
+<a class="country-card" href="Danimarca/index.html">
+  <div class="country-name">Danimarca</div>
+</a>
 
-showHome();
-</script>
+<a class="country-card" href="Ecuador/index.html">
+  <div class="country-name">Ecuador</div>
+</a>
 
+<a class="country-card" href="Egitto/index.html">
+  <div class="country-name">Egitto</div>
+</a>
+
+<a class="country-card" href="Estonia/index.html">
+  <div class="country-name">Estonia</div>
+</a>
+
+<a class="country-card" href="Etiopia/index.html">
+  <div class="country-name">Etiopia</div>
+</a>
+
+<a class="country-card" href="Fiji/index.html">
+  <div class="country-name">Fiji</div>
+</a>
+
+<a class="country-card" href="Filippine/index.html">
+  <div class="country-name">Filippine</div>
+</a>
+
+<a class="country-card" href="Finlandia/index.html">
+  <div class="country-name">Finlandia</div>
+</a>
+
+<a class="country-card" href="Francia/index.html">
+  <div class="country-name">Francia</div>
+</a>
+
+<a class="country-card" href="Georgia/index.html">
+  <div class="country-name">Georgia</div>
+</a>
+
+<a class="country-card" href="Germania/index.html">
+  <div class="country-name">Germania</div>
+</a>
+
+<a class="country-card" href="Giappone/index.html">
+  <div class="country-name">Giappone</div>
+</a>
+
+<a class="country-card" href="Ghana/index.html">
+  <div class="country-name">Ghana</div>
+</a>
+
+<a class="country-card" href="Grecia/index.html">
+  <div class="country-name">Grecia</div>
+</a>
+
+<a class="country-card" href="Guatemala/index.html">
+  <div class="country-name">Guatemala</div>
+</a>
+
+<a class="country-card" href="India/index.html">
+  <div class="country-name">India</div>
+</a>
+
+<a class="country-card" href="Indonesia/index.html">
+  <div class="country-name">Indonesia</div>
+</a>
+
+<a class="country-card" href="Iran/index.html">
+  <div class="country-name">Iran</div>
+</a>
+
+<a class="country-card" href="Irlanda/index.html">
+  <div class="country-name">Irlanda</div>
+</a>
+
+<a class="country-card" href="Italia/index.html">
+  <div class="country-name">Italia</div>
+</a>
+
+<a class="country-card" href="Kenya/index.html">
+  <div class="country-name">Kenya</div>
+</a>
+
+<a class="country-card" href="Kosovo/index.html">
+  <div class="country-name">Kosovo</div>
+</a>
+
+<a class="country-card" href="Laos/index.html">
+  <div class="country-name">Laos</div>
+</a>
+
+<a class="country-card" href="Lettonia/index.html">
+  <div class="country-name">Lettonia</div>
+</a>
+
+<a class="country-card" href="Libano/index.html">
+  <div class="country-name">Libano</div>
+</a>
+
+<a class="country-card" href="Lituania/index.html">
+  <div class="country-name">Lituania</div>
+</a>
+
+<a class="country-card" href="Lussemburgo/index.html">
+  <div class="country-name">Lussemburgo</div>
+</a>
+
+<a class="country-card" href="Macedonia/index.html">
+  <div class="country-name">Macedonia</div>
+</a>
+
+<a class="country-card" href="Malta/index.html">
+  <div class="country-name">Malta</div>
+</a>
+
+<a class="country-card" href="Messico/index.html">
+  <div class="country-name">Messico</div>
+</a>
+
+<a class="country-card" href="Moldova/index.html">
+  <div class="country-name">Moldova</div>
+</a>
+
+<a class="country-card" href="Mongolia/index.html">
+  <div class="country-name">Mongolia</div>
+</a>
+
+<a class="country-card" href="Montenegro/index.html">
+  <div class="country-name">Montenegro</div>
+</a>
+
+<a class="country-card" href="Namibia/index.html">
+  <div class="country-name">Namibia</div>
+</a>
+
+<a class="country-card" href="Nigeria/index.html">
+  <div class="country-name">Nigeria</div>
+</a>
+
+<a class="country-card" href="Norvegia/index.html">
+  <div class="country-name">Norvegia</div>
+</a>
+
+<a class="country-card" href="Nuova_Zelanda/index.html">
+  <div class="country-name">Nuova Zelanda</div>
+</a>
+
+<a class="country-card" href="Olanda/index.html">
+  <div class="country-name">Olanda</div>
+</a>
+
+<a class="country-card" href="Pakistan/index.html">
+  <div class="country-name">Pakistan</div>
+</a>
+
+<a class="country-card" href="Papua_Nuova_Guinea/index.html">
+  <div class="country-name">Papua Nuova Guinea</div>
+</a>
+
+<a class="country-card" href="Peru/index.html">
+  <div class="country-name">Perù</div>
+</a>
+
+<a class="country-card" href="Polonia/index.html">
+  <div class="country-name">Polonia</div>
+</a>
+
+<a class="country-card" href="Portogallo/index.html">
+  <div class="country-name">Portogallo</div>
+</a>
+
+<a class="country-card" href="RD_Congo/index.html">
+  <div class="country-name">R.D. Congo</div>
+</a>
+
+<a class="country-card" href="Regno_Unito/index.html">
+  <div class="country-name">UK</div>
+</a>
+
+<a class="country-card" href="Repubblica_Ceca/index.html">
+  <div class="country-name">Rep. Ceca</div>
+</a>
+
+<a class="country-card" href="Repubblica_Dominicana/index.html">
+  <div class="country-name">Rep. Dominicana</div>
+</a>
+
+<a class="country-card" href="Romania/index.html">
+  <div class="country-name">Romania</div>
+</a>
+
+<a class="country-card" href="Russia/index.html">
+  <div class="country-name">Russia</div>
+</a>
+
+<a class="country-card" href="Serbia/index.html">
+  <div class="country-name">Serbia</div>
+</a>
+
+<a class="country-card" href="Singapore/index.html">
+  <div class="country-name">Singapore</div>
+</a>
+
+<a class="country-card" href="Slovacchia/index.html">
+  <div class="country-name">Slovacchia</div>
+</a>
+
+<a class="country-card" href="Slovenia/index.html">
+  <div class="country-name">Slovenia</div>
+</a>
+
+<a class="country-card" href="Spagna/index.html">
+  <div class="country-name">Spagna</div>
+</a>
+
+<a class="country-card" href="Sri_Lanka/index.html">
+  <div class="country-name">Sri Lanka</div>
+</a>
+
+<a class="country-card" href="Sud_Africa/index.html">
+  <div class="country-name">Sud Africa</div>
+</a>
+
+<a class="country-card" href="Svezia/index.html">
+  <div class="country-name">Svezia</div>
+</a>
+
+<a class="country-card" href="Svizzera/index.html">
+  <div class="country-name">Svizzera</div>
+</a>
+
+<a class="country-card" href="Tajikistan/index.html">
+  <div class="country-name">Tajikistan</div>
+</a>
+
+<a class="country-card" href="Tanzania/index.html">
+  <div class="country-name">Tanzania</div>
+</a>
+
+<a class="country-card" href="Thailandia/index.html">
+  <div class="country-name">Thailandia</div>
+</a>
+
+<a class="country-card" href="Tonga/index.html">
+  <div class="country-name">Tonga</div>
+</a>
+
+<a class="country-card" href="Turchia/index.html">
+  <div class="country-name">Turchia</div>
+</a>
+
+<a class="country-card" href="Ucraina/index.html">
+  <div class="country-name">Ucraina</div>
+</a>
+
+<a class="country-card" href="Uganda/index.html">
+  <div class="country-name">Uganda</div>
+</a>
+
+<a class="country-card" href="Ungheria/index.html">
+  <div class="country-name">Ungheria</div>
+</a>
+
+<a class="country-card" href="Uruguay/index.html">
+  <div class="country-name">Uruguay</div>
+</a>
+
+<a class="country-card" href="USA/index.html">
+  <div class="country-name">USA</div>
+</a>
+
+<a class="country-card" href="Vietnam/index.html">
+  <div class="country-name">Vietnam</div>
+</a>
 </body>
 </html>
