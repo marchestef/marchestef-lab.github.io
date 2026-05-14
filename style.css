@@ -208,11 +208,15 @@ footer {
 .country-name {
 
     position: absolute;
-bottom: 0;
-  left: 0;
-  width: 100%;
+
+    bottom: 0;
+  
+    left: 0;
+  
+    width: 100%;
 
     padding: 6px;
+
   font-weight: bold;
   
   text-transform: uppercase;
