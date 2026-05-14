@@ -1,5 +1,0 @@
-defaults:
-  - scope:
-      path: "" # Applica a tutto il sito
-    values:
-      layout: "nazione"
