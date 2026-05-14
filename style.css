@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #121212;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* HEADER */
+
+header {
+    background: #1c1c1c;
+    padding: 20px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #333;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #f0b400;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 400;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: #f0b400;
+}
+
+/* HERO */
+
+.hero {
+    height: 350px;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6)),
+        url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=1600');
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 80px;
+}
+
+.hero-content h1 {
+    font-size: 58px;
+    color: #f0b400;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 22px;
+    color: #ddd;
+}
+
+/* MAIN */
+
+main {
+    padding: 60px;
+}
+
+.section-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #f0b400;
+}
+
+/* GRID */
+
+.countries-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 25px;
+}
+
+/* CARD */
+
+.country-card {
+
+    background: #1f1f1f;
+
+    height: 180px;
+
+    border-radius: 18px;
+
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.25s;
+
+    border: 1px solid #2c2c2c;
+}
+
+.country-card:hover {
+
+    transform: translateY(-5px);
+
+    background: #292929;
+
+    border-color: #f0b400;
+}
+
+.country-name {
+
+    font-size: 28px;
+    font-weight: 700;
+
+    color: white;
+}
+
+/* FOOTER */
+
+footer {
+
+    text-align: center;
+
+    padding: 30px;
+
+    margin-top: 50px;
+
+    color: #888;
+
+    border-top: 1px solid #2a2a2a;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    header {
+
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero {
+
+        padding: 30px;
+        height: 280px;
+    }
+
+    .hero-content h1 {
+
+        font-size: 38px;
+    }
+
+    .hero-content p {
+
+        font-size: 18px;
+    }
+
+    main {
+
+        padding: 30px;
+    }
+}
