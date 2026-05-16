@@ -138,14 +138,22 @@ h1 {
 }
 
 .topbar {
+
+  width: 100%;
+
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+
   gap: 20px;
 
   margin-bottom: 40px;
 
   flex-wrap: wrap;
+}
+
+.topbar-left {
+  flex: 1;
 }
 
 .topbar-left h1 {
@@ -154,27 +162,34 @@ h1 {
 }
 
 .site-info {
+
   display: flex;
   flex-direction: column;
-  gap: 5px;
+
+  gap: 6px;
 
   margin-top: 10px;
 
   color: #cbd5e1;
+
   font-size: 0.95rem;
 }
 
 .topbar-right {
+
+  min-width: 180px;
+
   display: flex;
-  align-items: center;
+  justify-content: flex-end;
 }
 
 .counter-box {
+
   background: #1e293b;
 
   border-radius: 16px;
 
-  padding: 18px 25px;
+  padding: 18px 28px;
 
   text-align: center;
 
@@ -182,15 +197,18 @@ h1 {
 }
 
 .counter-number {
+
   display: block;
 
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: bold;
 
   color: #fbbf24;
 }
 
 .counter-label {
+
   color: #cbd5e1;
+
   font-size: 0.9rem;
 }
