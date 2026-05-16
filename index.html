@@ -13,10 +13,8 @@
 
 <script>
 
-const today = new Date();
-
-document.getElementById("today-date").innerHTML =
-today.toLocaleDateString("it-IT");
+document.getElementById("today-date").textContent =
+new Date().toLocaleDateString("it-IT");
 
 </script>
 
