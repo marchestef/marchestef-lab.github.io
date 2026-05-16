@@ -11,7 +11,46 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
+<script>
+
+const today = new Date();
+
+document.getElementById("today-date").innerHTML =
+today.toLocaleDateString("it-IT");
+
+</script>
+
 <body>
+
+<header class="topbar">
+
+  <div class="topbar-left">
+
+    <div class="site-info">
+
+      <span><strong>Stefano Marchese</strong></span>
+
+      <span>Data: <span id="today-date"></span></span>
+
+      <span>Ultimo aggiornamento: 16/05/2026</span>
+
+    </div>
+
+  </div>
+
+  <div class="topbar-right">
+
+    <div class="counter-box">
+
+      <span class="counter-number">1248</span>
+
+      <span class="counter-label">Etichette</span>
+
+    </div>
+
+  </div>
+
+</header>
 
 <h1>🍺 Collezione Etichette Birra</h1>
 
