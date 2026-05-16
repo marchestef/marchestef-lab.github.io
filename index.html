@@ -11,13 +11,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<script>
-
-document.getElementById("today-date").textContent =
-new Date().toLocaleDateString("it-IT");
-
-</script>
-
 <body>
 
 <header class="topbar">
@@ -751,3 +744,19 @@ new Date().toLocaleDateString("it-IT");
 </a>
 </body>
 </html>
+
+<script>
+
+window.onload = function () {
+
+  const today = new Date();
+
+  const formatted =
+    today.toLocaleDateString("it-IT");
+
+  document.getElementById("today-date").innerHTML =
+    formatted;
+
+};
+
+</script>
