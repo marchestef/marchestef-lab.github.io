@@ -145,17 +145,22 @@ h1 {
   justify-content: space-between;
   align-items: flex-start;
 
-  gap: 20px;
+  gap: 10px;
 
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 
   flex-wrap: wrap;
 }
 
 .topbar-left {
-  flex: 1;
+  position: absolute;
+  top: 30px;
+  left: 30px;
 }
 
+.topbar-left {
+  flex: 1;
+}
 .topbar-left h1 {
   margin: 0;
   color: #fbbf24;
@@ -176,11 +181,9 @@ h1 {
 }
 
 .topbar-right {
-
-  min-width: 180px;
-
-  display: flex;
-  justify-content: flex-end;
+  position: absolute;
+  top: 30px;
+  right: 30px;
 }
 
 .counter-box {
@@ -212,3 +215,28 @@ h1 {
 
   font-size: 0.9rem;
 }
+
+.topbar-center {
+
+  flex: 1;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+.topbar-center img {
+
+  width: 100%;
+
+  max-width: 700px;
+
+  height: 400px;
+
+  object-fit: cover;
+
+  border-radius: 18px;
+
+  box-shadow: 0 0 20px rgba(0,0,0,0.35);
+}
+
