@@ -217,26 +217,19 @@ h1 {
 }
 
 .topbar-center {
-
   flex: 1;
-
   display: flex;
-
   justify-content: center;
+  align-items: center;
 }
 
 .topbar-center img {
-
-  width: 100%;
-
-  max-width: 700px;
-
-  height: 400px;
-
-  object-fit: cover;
+  width: 700px;
+  max-width: 90%;
+  height: auto;
 
   border-radius: 18px;
-
   box-shadow: 0 0 20px rgba(0,0,0,0.35);
-}
 
+  display: block;
+}
