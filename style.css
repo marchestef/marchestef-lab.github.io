@@ -241,3 +241,23 @@ h1 {
   }
 
 }
+
+ {
+
+  min-width: 1400px;
+}
+
+.topbar {
+
+  flex-wrap: nowrap !important;
+}
+
+.countries-grid {
+
+  grid-template-columns: repeat(5, 1fr) !important;
+}
+
+.breweries-grid {
+
+  grid-template-columns: repeat(5, 1fr) !important;
+}
