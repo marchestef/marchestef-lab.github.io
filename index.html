@@ -1,773 +1,720 @@
 
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=1400">
-
+  <!-- Ripristinato il viewport corretto per far funzionare i telefoni -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Collezione Etichette Birra</title>
-
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="topbar-center">
-
-  <img src="img/banner.jpg" alt="Collezione Birra">
-
-</div>
-
-<header class="topbar">
-
-<div class="topbar">
-
-  <div class="topbar-left">
-
-    <div class="site-info">
-
-      <span><strong>Stefano Marchese</strong></span>
-
-      <span>Data: <span id="today-date"></span></span>
-
-      <span>Ultimo aggiornamento: 16/05/2026</span>
-
-    </div>
-  </div>
-
-  <div class="topbar-right">
-
-    <div class="counter-box">
-
-      <span class="counter-number">1248</span>
-
-      <span class="counter-label">Etichette</span>
-
+  <!-- TOPBAR UNIFICATA E CORRETTA -->
+  <header class="topbar">
+    
+    <!-- 1. BLOCCO SINISTRA -->
+    <div class="topbar-left">
+      <div class="site-info">
+        <span><strong>Stefano Marchese</strong></span>
+        <span>Data: <span id="today-date"></span></span>
+        <span>Ultimo aggiornamento: 16/05/2026</span>
+      </div>
     </div>
 
-  </div>
-
-</header>
-
-<h1>🍺 Collezione Etichette Birra</h1>
-
-<div class="card-grid">
-
- <a class="country-card" href="Argentina/index.html">
-  <img class="bg" src="img/argentina.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/ar.png">
-    <span>Argentina</span>
-  </div>
-</a>
-
-<a class="country-card" href="Australia/index.html">
-  <img class="bg" src="img/australia.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/au.png">
-    <span>Australia</span>
-  </div>
-</a>
-
-<a class="country-card" href="Austria/index.html">
-  <img class="bg" src="img/austria.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/at.png">
-    <span>Austria</span>
-  </div>
-</a>
-
-<a class="country-card" href="Bahamas/index.html">
-  <img class="bg" src="img/bahamas.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/bs.png">
-    <span>Bahamas</span>
-  </div>
-</a>
-
-<a class="country-card" href="Belgio/index.html">
-  <img class="bg" src="img/belgio.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/be.png">
-    <span>Belgio</span>
-  </div>
-</a>
-
-<a class="country-card" href="Bielorussia/index.html">
-  <img class="bg" src="img/bielorussia.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/by.png">
-    <span>Bielorussia</span>
-  </div>
-</a>
-
-<a class="country-card" href="Bosnia_Herzegovina/index.html">
-  <img class="bg" src="img/bosnia_herzegovina.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/ba.png">
-    <span>Bosnia Herzegovina</span>
-  </div>
-</a>
-
-<a class="country-card" href="Brasile/index.html">
-  <img class="bg" src="img/brasile.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/br.png">
-    <span>Brasile</span>
-  </div>
-</a>
-
-<a class="country-card" href="Bulgaria/index.html">
-  <img class="bg" src="img/bulgaria.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/bg.png">
-    <span>Bulgaria</span>
-  </div>
-</a>
-
-<a class="country-card" href="Canada/index.html">
-  <img class="bg" src="img/canada.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/ca.png">
-    <span>Canada</span>
-  </div>
-</a>
-
-<a class="country-card" href="Camerun/index.html">
-  <img class="bg" src="img/camerun.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/cm.png">
-    <span>Camerun</span>
-  </div>
-</a>
-
-<a class="country-card" href="Cina/index.html">
-  <img class="bg" src="img/cina.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/cn.png">
-    <span>Cina</span>
-  </div>
-</a>
-
-<a class="country-card" href="Cile/index.html">
-  <img class="bg" src="img/cile.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/cl.png">
-    <span>Cile</span>
-  </div>
-</a>
-
-<a class="country-card" href="Corea_del_Sud/index.html">
-  <img class="bg" src="img/corea_del_sud.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/kr.png">
-    <span>Corea del Sud</span>
-  </div>
-</a>
-
-<a class="country-card" href="Croazia/index.html">
-  <img class="bg" src="img/croazia.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/hr.png">
-    <span>Croazia</span>
-  </div>
-</a>
-
-<a class="country-card" href="Cuba/index.html">
-  <img class="bg" src="img/cuba.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/cu.png">
-    <span>Cuba</span>
-  </div>
-</a>
-
-<a class="country-card" href="Danimarca/index.html">
-  <img class="bg" src="img/danimarca.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/dk.png">
-    <span>Danimarca</span>
-  </div>
-</a>
-
-<a class="country-card" href="Ecuador/index.html">
-  <img class="bg" src="img/ecuador.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/ec.png">
-    <span>Ecuador</span>
-  </div>
-</a>
-
-<a class="country-card" href="Egitto/index.html">
-  <img class="bg" src="img/egitto.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/eg.png">
-    <span>Egitto</span>
-  </div>
-</a>
-
-<a class="country-card" href="Estonia/index.html">
-  <img class="bg" src="img/estonia.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/ee.png">
-    <span>Estonia</span>
-  </div>
-</a>
-
-<a class="country-card" href="Etiopia/index.html">
-  <img class="bg" src="img/etiopia.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/et.png">
-    <span>Etiopia</span>
-  </div>
-</a> 
-
-<a class="country-card" href="Filippine/index.html">
-  <img class="bg" src="img/filippine.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/ph.png">
-    <span>Filippine</span>
-  </div>
-</a>
-
-<a class="country-card" href="Fiji/index.html">
-  <img class="bg" src="img/fiji.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/fj.png">
-    <span>Fiji</span>
-  </div>
-</a>
-
-
-<a class="country-card" href="Finlandia/index.html">
-  <img class="bg" src="img/finlandia.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/fi.png">
-    <span>Finlandia</span>
-  </div>
-</a>
-
-<a class="country-card" href="Francia/index.html">
-  <img class="bg" src="img/francia.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/fr.png">
-    <span>Francia</span>
-  </div>
-</a>
-
-<a class="country-card" href="Georgia/index.html">
-  <img class="bg" src="img/georgia.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/ge.png">
-    <span>Georgia</span>
-  </div>
-</a>
-
-
-<a class="country-card" href="Germania/index.html">
-  <img class="bg" src="img/germania.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/de.png">
-    <span>Germania</span>
-  </div>
-</a>
-
-<!-- Ghana -->
-<a class="country-card" href="Ghana/index.html">
-  <img class="bg" src="img/ghana.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/gh.png">
-    <span>Ghana</span>
-  </div>
-</a>
-
-<a class="country-card" href="Giappone/index.html">
-  <img class="bg" src="img/giappone.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/jp.png">
-    <span>Giappone</span>
-  </div>
-</a>
-
-<a class="country-card" href="Grecia/index.html">
-  <img class="bg" src="img/grecia.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/gr.png">
-    <span>Grecia</span>
-  </div>
-</a>
-
-<a class="country-card" href="Guatemala/index.html">
-  <img class="bg" src="img/guatemala.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/gt.png">
-    <span>Guatemala</span>
-  </div>
-</a>
-
-<a class="country-card" href="India/index.html">
-  <img class="bg" src="img/india.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/in.png">
-    <span>India</span>
-  </div>
-</a>
-
-<a class="country-card" href="Indonesia/index.html">
-  <img class="bg" src="img/indonesia.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/id.png">
-    <span>Indonesia</span>
-  </div>
-</a>
-
-<a class="country-card" href="Iran/index.html">
-  <img class="bg" src="img/iran.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/ir.png">
-    <span>Iran</span>
-  </div>
-</a>
-
-<a class="country-card" href="Irlanda/index.html">
-  <img class="bg" src="img/irlanda.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/ie.png">
-    <span>Irlanda</span>
-  </div>
-</a>
-
-<a class="country-card" href="Italia/index.html">
-  <img class="bg" src="img/italia.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/it.png">
-    <span>Italia</span>
-  </div>
-</a>
-
-<a class="country-card" href="Kenya/index.html">
-  <img class="bg" src="img/kenya.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/ke.png">
-    <span>Kenya</span>
-  </div>
-</a>
-
-
-<a class="country-card" href="Kosovo/index.html">
-  <img class="bg" src="img/kosovo.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/xk.png">
-    <span>Kosovo</span>
-  </div>
-</a>
-
-<a class="country-card" href="Laos/index.html">
-  <img class="bg" src="img/laos.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/la.png">
-    <span>Laos</span>
-  </div>
-</a>
-
-<!-- Lettonia -->
-<a class="country-card" href="Lettonia/index.html">
-  <img class="bg" src="img/lettonia.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/lv.png">
-    <span>Lettonia</span>
-  </div>
-</a>
-
-<!-- Libano -->
-<a class="country-card" href="Libano/index.html">
-  <img class="bg" src="img/libano.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/lb.png">
-    <span>Libano</span>
-  </div>
-</a>
-
-<!-- Lituania -->
-<a class="country-card" href="Lituania/index.html">
-  <img class="bg" src="img/lituania.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/lt.png">
-    <span>Lituania</span>
-  </div>
-</a>
-
-<!-- Lussemburgo -->
-<a class="country-card" href="Lussemburgo/index.html">
-  <img class="bg" src="img/lussemburgo.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/lu.png">
-    <span>Lussemburgo</span>
-  </div>
-</a>
-
-<!-- Macedonia -->
-<a class="country-card" href="Macedonia/index.html">
-  <img class="bg" src="img/macedonia.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/mk.png">
-    <span>Macedonia</span>
-  </div>
-</a>
-
-<!-- Malta -->
-<a class="country-card" href="Malta/index.html">
-  <img class="bg" src="img/malta.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/mt.png">
-    <span>Malta</span>
-  </div>
-</a>
-
-<a class="country-card" href="Messico/index.html">
-  <img class="bg" src="img/messico.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/mx.png">
-    <span>Messico</span>
-  </div>
-</a>
-
-<!-- Mongolia -->
-<a class="country-card" href="Mongolia/index.html">
-  <img class="bg" src="img/mongolia.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/mn.png">
-    <span>Mongolia</span>
-  </div>
-</a>
-
-<!-- Montenegro -->
-<a class="country-card" href="Montenegro/index.html">
-  <img class="bg" src="img/montenegro.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/me.png">
-    <span>Montenegro</span>
-  </div>
-</a>
-
-<!-- Namibia -->
-<a class="country-card" href="Namibia/index.html">
-  <img class="bg" src="img/namibia.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/na.png">
-    <span>Namibia</span>
-  </div>
-</a>
-
-<a class="country-card" href="Nigeria/index.html">
-  <img class="bg" src="img/nigeria.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/ng.png">
-    <span>Nigeria</span>
-  </div>
-</a>
-
-<a class="country-card" href="Norvegia/index.html">
-  <img class="bg" src="img/norvegia.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/no.png">
-    <span>Norvegia</span>
-  </div>
-</a>
-
-<a class="country-card" href="Olanda/index.html">
-  <img class="bg" src="img/olanda.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/nl.png">
-    <span>Olanda</span>
-  </div>
-</a>
-
-<!-- Pakistan -->
-<a class="country-card" href="Pakistan/index.html">
-  <img class="bg" src="img/pakistan.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/pk.png">
-    <span>Pakistan</span>
-  </div>
-</a>
-
-<!-- Papua Nuova Guinea -->
-<a class="country-card" href="Papua-Nuova-Guinea/index.html">
-  <img class="bg" src="img/papua-nuova-guinea.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/pg.png">
-    <span>Papua Nuova Guinea</span>
-  </div>
-</a>
-
-<a class="country-card" href="Peru/index.html">
-  <img class="bg" src="img/peru.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/pe.png">
-    <span>Peru’</span>
-  </div>
-</a>
-
-<a class="country-card" href="Polonia/index.html">
-  <img class="bg" src="img/polonia.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/pl.png">
-    <span>Polonia</span>
-  </div>
-</a>
-
-<a class="country-card" href="Portogallo/index.html">
-  <img class="bg" src="img/portogallo.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/pt.png">
-    <span>Portogallo</span>
-  </div>
-</a>
-
-<a class="country-card" href="Regno_Unito/index.html">
-  <img class="bg" src="img/regno_unito.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/gb.png">
-    <span>UK</span>
-  </div>
-</a>
-
-<a class="country-card" href="Repubblica_Ceca/index.html">
-  <img class="bg" src="img/repubblica_ceca.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/cz.png">
-    <span>Rep. Ceca</span>
-  </div>
-</a>
-
-<!-- R.D. Congo -->
-<a class="country-card" href="RD-Congo/index.html">
-  <img class="bg" src="img/rd-congo.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/cd.png">
-    <span>R.D. Congo</span>
-  </div>
-</a>
-
-<!-- Rep. Dominicana -->
-<a class="country-card" href="Rep-Dominicana/index.html">
-  <img class="bg" src="img/rep-dominicana.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/do.png">
-    <span>Rep. Dominicana</span>
-  </div>
-</a>
-
-
-<a class="country-card" href="Romania/index.html">
-  <img class="bg" src="img/romania.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/ro.png">
-    <span>Romania</span>
-  </div>
-</a>
-
-<a class="country-card" href="Russia/index.html">
-  <img class="bg" src="img/russia.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/ru.png">
-    <span>Russia</span>
-  </div>
-</a>
-
-<!-- Serbia -->
-<a class="country-card" href="Serbia/index.html">
-  <img class="bg" src="img/serbia.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/rs.png">
-    <span>Serbia</span>
-  </div>
-</a>
-
-<!-- Singapore -->
-<a class="country-card" href="Singapore/index.html">
-  <img class="bg" src="img/singapore.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/sg.png">
-    <span>Singapore</span>
-  </div>
-</a>
-
-<!-- Slovacchia -->
-<a class="country-card" href="Slovacchia/index.html">
-  <img class="bg" src="img/slovacchia.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/sk.png">
-    <span>Slovacchia</span>
-  </div>
-</a>
-
-<!-- Slovenia -->
-<a class="country-card" href="Slovenia/index.html">
-  <img class="bg" src="img/slovenia.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/si.png">
-    <span>Slovenia</span>
-  </div>
-</a>
-
-<a class="country-card" href="Spagna/index.html">
-  <img class="bg" src="img/spagna.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/es.png">
-    <span>Spagna</span>
-  </div>
-</a>
-
-<!-- Sri Lanka -->
-<a class="country-card" href="Sri-Lanka/index.html">
-  <img class="bg" src="img/sri-lanka.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/lk.png">
-    <span>Sri Lanka</span>
-  </div>
-</a>
-
-<!-- Sud Africa -->
-<a class="country-card" href="Sud-Africa/index.html">
-  <img class="bg" src="img/sud-africa.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/za.png">
-    <span>Sud Africa</span>
-  </div>
-</a>
-
-<a class="country-card" href="Svezia/index.html">
-  <img class="bg" src="img/svezia.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/se.png">
-    <span>Svezia</span>
-  </div>
-</a>
-
-<a class="country-card" href="Svizzera/index.html">
-  <img class="bg" src="img/svizzera.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/ch.png">
-    <span>Svizzera</span>
-  </div>
-</a>
-
-<!-- Tajikistan -->
-<a class="country-card" href="Tajikistan/index.html">
-  <img class="bg" src="img/tajikistan.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/tj.png">
-    <span>Tajikistan</span>
-  </div>
-</a>
-
-<!-- Tanzania -->
-<a class="country-card" href="Tanzania/index.html">
-  <img class="bg" src="img/tanzania.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/tz.png">
-    <span>Tanzania</span>
-  </div>
-</a>
-
-<a class="country-card" href="Thailandia/index.html">
-  <img class="bg" src="img/thailandia.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/th.png">
-    <span>Thailandia</span>
-  </div>
-</a>
-
-
-<!-- Tonga -->
-<a class="country-card" href="Tonga/index.html">
-  <img class="bg" src="img/tonga.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/to.png">
-    <span>Tonga</span>
-  </div>
-</a>
-
-
-<a class="country-card" href="Turchia/index.html">
-  <img class="bg" src="img/turchia.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/tr.png">
-    <span>Turchia</span>
-  </div>
-</a>
-
-<a class="country-card" href="Ucraina/index.html">
-  <img class="bg" src="img/ucraina.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/ua.png">
-    <span>Ucraina</span>
-  </div>
-</a>
-
-<!-- Uganda -->
-<a class="country-card" href="Uganda/index.html">
-  <img class="bg" src="img/uganda.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/ug.png">
-    <span>Uganda</span>
-  </div>
-</a>
-
-<a class="country-card" href="Ungheria/index.html">
-  <img class="bg" src="img/ungheria.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/hu.png">
-    <span>Ungheria</span>
-  </div>
-</a>
-
-
-<!-- Uruguay -->
-<a class="country-card" href="Uruguay/index.html">
-  <img class="bg" src="img/uruguay.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/uy.png">
-    <span>Uruguay</span>
-  </div>
-</a>
-
-<a class="country-card" href="USA/index.html">
-  <img class="bg" src="img/usa.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/us.png">
-    <span>USA</span>
-  </div>
-</a>
-
-<a class="country-card" href="Vietnam/index.html">
-  <img class="bg" src="img/vietnam.jpg">
-  <div class="country-info">
-    <img class="flag" src="https://flagcdn.com/w40/vn.png">
-    <span>Vietnam</span>
-  </div>
-</a>
+    <!-- 2. BLOCCO CENTRO (Ora è dentro la topbar!) -->
+    <div class="topbar-center">
+      <img src="img/banner.jpg" alt="Collezione Birra">
+    </div>
+
+    <!-- 3. BLOCCO DESTRA -->
+    <div class="topbar-right">
+      <div class="counter-box">
+        <span class="counter-number">1248</span>
+        <span class="counter-label">Etichette</span>
+      </div>
+    </div>
+
+  </header>
+
+  <h1>🍺 Collezione Etichette Birra</h1>
+
+  <!-- GRIGLIA DELLE CARD -->
+  <div class="card-grid">
+
+    <a class="country-card" href="Argentina/index.html">
+      <img class="bg" src="img/argentina.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/ar.png">
+        <span>Argentina</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Australia/index.html">
+      <img class="bg" src="img/australia.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/au.png">
+        <span>Australia</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Austria/index.html">
+      <img class="bg" src="img/austria.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/at.png">
+        <span>Austria</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Bahamas/index.html">
+      <img class="bg" src="img/bahamas.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/bs.png">
+        <span>Bahamas</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Belgio/index.html">
+      <img class="bg" src="img/belgio.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/be.png">
+        <span>Belgio</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Bielorussia/index.html">
+      <img class="bg" src="img/bielorussia.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/by.png">
+        <span>Bielorussia</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Bosnia_Herzegovina/index.html">
+      <img class="bg" src="img/bosnia_herzegovina.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/ba.png">
+        <span>Bosnia Herzegovina</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Brasile/index.html">
+      <img class="bg" src="img/brasile.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/br.png">
+        <span>Brasile</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Bulgaria/index.html">
+      <img class="bg" src="img/bulgaria.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/bg.png">
+        <span>Bulgaria</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Canada/index.html">
+      <img class="bg" src="img/canada.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/ca.png">
+        <span>Canada</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Camerun/index.html">
+      <img class="bg" src="img/camerun.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/cm.png">
+        <span>Camerun</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Cina/index.html">
+      <img class="bg" src="img/cina.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/cn.png">
+        <span>Cina</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Cile/index.html">
+      <img class="bg" src="img/cile.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/cl.png">
+        <span>Cile</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Corea_del_Sud/index.html">
+      <img class="bg" src="img/corea_del_sud.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/kr.png">
+        <span>Corea del Sud</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Croazia/index.html">
+      <img class="bg" src="img/croazia.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/hr.png">
+        <span>Croazia</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Cuba/index.html">
+      <img class="bg" src="img/cuba.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/cu.png">
+        <span>Cuba</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Danimarca/index.html">
+      <img class="bg" src="img/danimarca.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/dk.png">
+        <span>Danimarca</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Ecuador/index.html">
+      <img class="bg" src="img/ecuador.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/ec.png">
+        <span>Ecuador</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Egitto/index.html">
+      <img class="bg" src="img/egitto.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/eg.png">
+        <span>Egitto</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Estonia/index.html">
+      <img class="bg" src="img/estonia.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/ee.png">
+        <span>Estonia</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Etiopia/index.html">
+      <img class="bg" src="img/etiopia.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/et.png">
+        <span>Etiopia</span>
+      </div>
+    </a> 
+
+    <a class="country-card" href="Filippine/index.html">
+      <img class="bg" src="img/filippine.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/ph.png">
+        <span>Filippine</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Fiji/index.html">
+      <img class="bg" src="img/fiji.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/fj.png">
+        <span>Fiji</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Finlandia/index.html">
+      <img class="bg" src="img/finlandia.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/fi.png">
+        <span>Finlandia</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Francia/index.html">
+      <img class="bg" src="img/francia.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/fr.png">
+        <span>Francia</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Georgia/index.html">
+      <img class="bg" src="img/georgia.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/ge.png">
+        <span>Georgia</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Germania/index.html">
+      <img class="bg" src="img/germania.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/de.png">
+        <span>Germania</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Ghana/index.html">
+      <img class="bg" src="img/ghana.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/gh.png">
+        <span>Ghana</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Giappone/index.html">
+      <img class="bg" src="img/giappone.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/jp.png">
+        <span>Giappone</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Grecia/index.html">
+      <img class="bg" src="img/grecia.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/gr.png">
+        <span>Grecia</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Guatemala/index.html">
+      <img class="bg" src="img/guatemala.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/gt.png">
+        <span>Guatemala</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="India/index.html">
+      <img class="bg" src="img/india.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/in.png">
+        <span>India</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Indonesia/index.html">
+      <img class="bg" src="img/indonesia.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/id.png">
+        <span>Indonesia</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Iran/index.html">
+      <img class="bg" src="img/iran.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/ir.png">
+        <span>Iran</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Irlanda/index.html">
+      <img class="bg" src="img/irlanda.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/ie.png">
+        <span>Irlanda</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Italia/index.html">
+      <img class="bg" src="img/italia.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/it.png">
+        <span>Italia</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Kenya/index.html">
+      <img class="bg" src="img/kenya.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/ke.png">
+        <span>Kenya</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Kosovo/index.html">
+      <img class="bg" src="img/kosovo.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/xk.png">
+        <span>Kosovo</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Laos/index.html">
+      <img class="bg" src="img/laos.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/la.png">
+        <span>Laos</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Lettonia/index.html">
+      <img class="bg" src="img/lettonia.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/lv.png">
+        <span>Lettonia</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Libano/index.html">
+      <img class="bg" src="img/libano.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/lb.png">
+        <span>Libano</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Lituania/index.html">
+      <img class="bg" src="img/lituania.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/lt.png">
+        <span>Lituania</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Lussemburgo/index.html">
+      <img class="bg" src="img/lussemburgo.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/lu.png">
+        <span>Lussemburgo</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Macedonia/index.html">
+      <img class="bg" src="img/macedonia.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/mk.png">
+        <span>Macedonia</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Malta/index.html">
+      <img class="bg" src="img/malta.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/mt.png">
+        <span>Malta</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Messico/index.html">
+      <img class="bg" src="img/messico.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/mx.png">
+        <span>Messico</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Mongolia/index.html">
+      <img class="bg" src="img/mongolia.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/mn.png">
+        <span>Mongolia</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Montenegro/index.html">
+      <img class="bg" src="img/montenegro.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/me.png">
+        <span>Montenegro</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Namibia/index.html">
+      <img class="bg" src="img/namibia.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/na.png">
+        <span>Namibia</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Nigeria/index.html">
+      <img class="bg" src="img/nigeria.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/ng.png">
+        <span>Nigeria</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Norvegia/index.html">
+      <img class="bg" src="img/norvegia.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/no.png">
+        <span>Norvegia</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Olanda/index.html">
+      <img class="bg" src="img/olanda.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/nl.png">
+        <span>Olanda</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Pakistan/index.html">
+      <img class="bg" src="img/pakistan.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/pk.png">
+        <span>Pakistan</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Papua-Nuova-Guinea/index.html">
+      <img class="bg" src="img/papua-nuova-guinea.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/pg.png">
+        <span>Papua Nuova Guinea</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Peru/index.html">
+      <img class="bg" src="img/peru.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/pe.png">
+        <span>Peru’</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Polonia/index.html">
+      <img class="bg" src="img/polonia.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/pl.png">
+        <span>Polonia</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Portogallo/index.html">
+      <img class="bg" src="img/portogallo.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/pt.png">
+        <span>Portogallo</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Regno_Unito/index.html">
+      <img class="bg" src="img/regno_unito.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/gb.png">
+        <span>UK</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Repubblica_Ceca/index.html">
+      <img class="bg" src="img/repubblica_ceca.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/cz.png">
+        <span>Rep. Ceca</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="RD-Congo/index.html">
+      <img class="bg" src="img/rd-congo.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/cd.png">
+        <span>R.D. Congo</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Rep-Dominicana/index.html">
+      <img class="bg" src="img/rep-dominicana.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/do.png">
+        <span>Rep. Dominicana</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Romania/index.html">
+      <img class="bg" src="img/romania.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/ro.png">
+        <span>Romania</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Russia/index.html">
+      <img class="bg" src="img/russia.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/ru.png">
+        <span>Russia</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Serbia/index.html">
+      <img class="bg" src="img/serbia.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/rs.png">
+        <span>Serbia</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Singapore/index.html">
+      <img class="bg" src="img/singapore.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/sg.png">
+        <span>Singapore</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Slovacchia/index.html">
+      <img class="bg" src="img/slovacchia.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/sk.png">
+        <span>Slovacchia</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Slovenia/index.html">
+      <img class="bg" src="img/slovenia.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/si.png">
+        <span>Slovenia</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Spagna/index.html">
+      <img class="bg" src="img/spagna.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/es.png">
+        <span>Spagna</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Sri-Lanka/index.html">
+      <img class="bg" src="img/sri-lanka.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/lk.png">
+        <span>Sri Lanka</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Sud-Africa/index.html">
+      <img class="bg" src="img/sud-africa.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/za.png">
+        <span>Sud Africa</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Svezia/index.html">
+      <img class="bg" src="img/svezia.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/se.png">
+        <span>Svezia</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Svizzera/index.html">
+      <img class="bg" src="img/svizzera.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/ch.png">
+        <span>Svizzera</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Tajikistan/index.html">
+      <img class="bg" src="img/tajikistan.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/tj.png">
+        <span>Tajikistan</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Tanzania/index.html">
+      <img class="bg" src="img/tanzania.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/tz.png">
+        <span>Tanzania</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Thailandia/index.html">
+      <img class="bg" src="img/thailandia.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/th.png">
+        <span>Thailandia</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Tonga/index.html">
+      <img class="bg" src="img/tonga.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/to.png">
+        <span>Tonga</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Turchia/index.html">
+      <img class="bg" src="img/turchia.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/tr.png">
+        <span>Turchia</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Ucraina/index.html">
+      <img class="bg" src="img/ucraina.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/ua.png">
+        <span>Ucraina</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Uganda/index.html">
+      <img class="bg" src="img/uganda.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/ug.png">
+        <span>Uganda</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Ungheria/index.html">
+      <img class="bg" src="img/ungheria.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/hu.png">
+        <span>Ungheria</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Uruguay/index.html">
+      <img class="bg" src="img/uruguay.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/uy.png">
+        <span>Uruguay</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="USA/index.html">
+      <img class="bg" src="img/usa.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/us.png">
+        <span>USA</span>
+      </div>
+    </a>
+
+    <a class="country-card" href="Vietnam/index.html">
+      <img class="bg" src="img/vietnam.jpg">
+      <div class="country-info">
+        <img class="flag" src="https://flagcdn.com/w40/vn.png">
+        <span>Vietnam</span>
+      </div>
+    </a>
+
+  </div> <!-- Chiusura corretta di card-grid -->
+
+  <script>
+    window.onload = function () {
+      const today = new Date();
+      const formatted = today.toLocaleDateString("it-IT");
+      document.getElementById("today-date").innerHTML = formatted;
+    };
+  </script>
+
 </body>
 </html>
-
-<script>
-
-window.onload = function () {
-
-  const today = new Date();
-
-  const formatted =
-    today.toLocaleDateString("it-IT");
-
-  document.getElementById("today-date").innerHTML =
-    formatted;
-
-};
-
-</script>
-
-
-
-

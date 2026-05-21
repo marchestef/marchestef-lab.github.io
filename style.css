@@ -1,43 +1,103 @@
+/* ==========================================================================
+   1. RESET E STILI GLOBALI (Condivisi tra Home e Nazioni)
+   ========================================================================== */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 body {
   font-family: Arial, sans-serif;
-  background: #0f172a;
+  background: #0f172a; /* Sfondo scuro coerente */
   color: white;
   padding: 30px;
+  box-sizing: border-box;
 }
 
 h1 {
   text-align: center;
-  color: #fbbf24;
+  color: #fbbf24; /* Giallo birra per i titoli */
+  margin-top: 40px;
 }
 
+/* ==========================================================================
+   2. TOPBAR DELLA HOME PAGE (Allineamento PC e Mobile)
+   ========================================================================== */
+.topbar {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr; 
+  align-items: center; 
+  gap: 30px;
+  padding: 20px 0;
+  box-sizing: border-box;
+  width: 100%;
+  border-bottom: 1px solid #1e293b;
+}
+
+.topbar-left {
+  text-align: left;
+}
+
+.site-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+.topbar-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topbar-center img {
+  width: 100%;
+  max-width: 550px; 
+  height: auto;
+  border-radius: 18px;
+  display: block;
+}
+
+.topbar-right {
+  display: flex;
+  justify-content: flex-end; 
+}
+
+.counter-box {
+  background: #1e293b;
+  border-radius: 16px;
+  padding: 18px 28px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  min-width: 140px;
+}
+
+.counter-number {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #fbbf24;
+  line-height: 1.1;
+}
+
+.counter-label {
+  color: #cbd5e1;
+  font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   3. GRIGLIA STATI (Home Page)
+   ========================================================================== */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
   margin-top: 30px;
-}
-
-.country-card {
-  background: #1e293b;
-  padding: 40px 20px;
-  border-radius: 15px;
-
-  text-decoration: none;
-  color: white;
-
-  text-align: center;
-
-  transition: 0.2s;
-}
-
-.country-card:hover {
-  background: #334155;
-  transform: translateY(-5px);
-}
-
-.country-name {
-  font-size: 1.2rem;
-  font-weight: bold;
 }
 
 .country-card {
@@ -48,6 +108,14 @@ h1 {
   height: 140px;
   text-decoration: none;
   color: white;
+  background: #1e293b;
+  text-align: center;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.country-card:hover {
+  background: #334155;
+  transform: translateY(-5px);
 }
 
 .country-card .bg {
@@ -58,6 +126,7 @@ h1 {
   top: 0;
   left: 0;
   filter: brightness(0.6);
+  z-index: 1;
 }
 
 .country-info {
@@ -70,219 +139,78 @@ h1 {
   gap: 10px;
   font-weight: bold;
   font-size: 1.2rem;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .flag {
   width: 24px;
   height: 18px;
   border-radius: 3px;
+  object-fit: cover;
 }
 
+/* ==========================================================================
+   4. GRIGLIA BIRRIFICI (Pagine Nazioni es. Argentina) - RIPRISTINATA
+   ========================================================================== */
 .breweries-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  margin-top: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
 }
 
 .brewery-card {
-  position: relative;
-  height: 180px;
-
-  border-radius: 18px;
-  overflow: hidden;
-
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   text-decoration: none;
   color: white;
-
-  display: flex;
-  align-items: flex-end;
-
-  transition: 0.25s;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-height: 160px;
 }
 
 .brewery-card:hover {
-  transform: translateY(-6px) scale(1.02);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  background: #1e293b;
 }
 
 .brew-logo {
-  position: absolute;
-
-  width: 100%;
-  height: 100%;
-
-  top: 0;
-  left: 0;
-
-  object-fit: cover;
-
-  filter: brightness(0.45);
+  width: 100px;
+  height: 100px;
+  object-fit: fill;       /* <-- Questo forza lo stretching per riempire il quadrato */
+  border-radius: 12px;    /* Angoli arrotondati */
+  margin-bottom: 15px;
+  display: block;
 }
 
 .brew-name {
-  position: relative;
-  z-index: 2;
-
-  width: 100%;
-
-  padding: 18px;
-
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: bold;
-
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0,0.8),
-    rgba(0,0,0,0)
-  );
+  color: #e2e8f0;
 }
 
-.topbar {
-
-  width: 100%;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-
-  gap: 10px;
-
-  margin-bottom: 10px;
-
-  flex-wrap: wrap;
-}
-
-.topbar-left {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-}
-
-.topbar-left {
-  flex: 1;
-}
-.topbar-left h1 {
-  margin: 0;
-  color: #fbbf24;
-}
-
-.site-info {
-
-  display: flex;
-  flex-direction: column;
-
-  gap: 6px;
-
-  margin-top: 10px;
-
-  color: #cbd5e1;
-
-  font-size: 0.95rem;
-}
-
-.topbar-right {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-}
-
-.counter-box {
-
-  background: #1e293b;
-
-  border-radius: 16px;
-
-  padding: 18px 28px;
-
-  text-align: center;
-
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
-}
-
-.counter-number {
-
-  display: block;
-
-  font-size: 2.2rem;
-  font-weight: bold;
-
-  color: #fbbf24;
-}
-
-.counter-label {
-
-  color: #cbd5e1;
-
-  font-size: 0.9rem;
-}
-
-.topbar-center {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.topbar-center img {
-  width: 700px;
-  max-width: 90%;
-  height: auto;
-
-  border-radius: 18px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.35);
-
-  display: block;
-}
-
-@media (max-width: 768px) {
-
-  .topbar {
-    flex-direction: column;
-  }
-
-}
-
- {
-
-  min-width: 1400px;
-}
-
-.topbar {
-
-  flex-wrap: nowrap !important;
-}
-
-.countries-grid {
-
-  grid-template-columns: repeat(5, 1fr) !important;
-}
-
-.breweries-grid {
-
-  grid-template-columns: repeat(5, 1fr) !important;
-}
-
+/* Bottone Indietro Flottante */
 .back-button {
   position: fixed;
   top: 20px;
   left: 20px;
-
   width: 60px;
   height: 60px;
-
   border: none;
   border-radius: 50%;
-
   background: rgba(0,0,0,0.75);
-  color: yellow;
-
+  color: #fbbf24;
   font-size: 24px;
   font-weight: bold;
-
   cursor: pointer;
-
   z-index: 9999;
-
   transition: all 0.2s ease;
   backdrop-filter: blur(4px);
 }
@@ -292,64 +220,58 @@ h1 {
   background: black;
 }
 
-html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 12px;
-}
-
+/* ==========================================================================
+   5. RESPONSIVITÀ MOBILE (Sotto i 768px)
+   ========================================================================== */
 @media (max-width: 768px) {
-
-  .countries-grid,
-  .breweries-grid,
-  .grid,
-  .cards-container {
-    display: grid !important;
-
-    grid-template-columns: repeat(2, 1fr) !important;
-
-    gap: 14px !important;
-
-    width: 100% !important;
+  body {
+    padding: 15px;
   }
 
-  .card,
-  .brewery-card,
-  .country-card {
-    width: 100% !important;
-
-    min-width: 0 !important;
-
-    aspect-ratio: 0.7 / 1 !important;
-
-    border-radius: 18px;
-
-    overflow: hidden;
+  .topbar {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 20px !important;
+    padding: 10px 0 !important;
   }
 
-  .card img,
-  .brewery-card img,
-  .country-card img {
+  .topbar-left {
+    text-align: center !important;
+  }
+
+  .topbar-right {
+    justify-content: center !important;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
   }
 
-  .card h3,
-  .brewery-card h3,
-  .country-card h3 {
-    font-size: 18px !important;
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
 
-    line-height: 1.1;
+  .breweries-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 15px !important;
+  }
 
-    word-break: break-word;
+  .country-card {
+    height: 120px !important;
+  }
+  
+  .brewery-card {
+    padding: 12px !important;
+    min-height: 130px !important;
+  }
+
+  .brew-logo {
+    width: 80px !important;
+    height: 80px !important;
+    object-fit: fill !important;  /* Forza lo stretching anche su smartphone */
+    border-radius: 10px !important;
+  }
+  .brew-name {
+    font-size: 0.9rem !important;
   }
 }
