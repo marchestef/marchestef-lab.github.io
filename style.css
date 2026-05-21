@@ -199,27 +199,47 @@ h1 {
 /* Bottone Indietro Flottante */
 .back-button {
   position: fixed;
-  top: 20px;
-  left: 20px;
-  width: 60px;
-  height: 60px;
-  border: none;
+  top: 25px;
+  left: 25px;
+  width: 55px;
+  height: 55px;
+  border: 2px solid #fbbf24;       /* Elegante bordo color oro/giallo birra */
   border-radius: 50%;
-  background: rgba(0,0,0,0.75);
-  color: #fbbf24;
-  font-size: 24px;
+  background: rgba(15, 23, 42, 0.8); /* Sfondo scuro semi-trasparente */
+  color: #fbbf24;                  /* Freccia color oro */
+  font-size: 26px;
   font-weight: bold;
   cursor: pointer;
   z-index: 9999;
-  transition: all 0.2s ease;
-  backdrop-filter: blur(4px);
+  
+  /* Allineamento perfetto della freccia al centro */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Effetto vetro: sfoca quello che c'è sotto il bottone */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  
+  /* Ombra profonda per staccarlo dallo sfondo */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  
+  /* Transizione fluida per le animazioni */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Effetto quando ci passi sopra con il mouse (Hover) */
 .back-button:hover {
-  transform: scale(1.08);
-  background: black;
+  transform: scale(1.1) rotate(-8px); /* Si ingrandisce e si inclina leggermente a sinistra */
+  background: #fbbf24;                /* Lo sfondo diventa oro */
+  color: #0f172a;                     /* La freccia diventa scura */
+  box-shadow: 0 6px 25px rgba(251, 191, 36, 0.4); /* Bagliore dorato */
 }
 
+/* Effetto quando lo clicchi (Active) */
+.back-button:active {
+  transform: scale(0.95);             /* Effetto "pressione" del tasto */
+}
 /* ==========================================================================
    5. RESPONSIVITÀ MOBILE (Sotto i 768px)
    ========================================================================== */
