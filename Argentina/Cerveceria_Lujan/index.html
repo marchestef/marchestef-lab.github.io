@@ -1,27 +1,74 @@
-<DOCTYPE html>
-<html lang="it">
+<!DOCTYPE html> 
+<html lang="it"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Cerveceria Lujan</title> 
+    <!-- Torniamo indietro di due cartelle per prendere il CSS globale -->
+    <link rel="stylesheet" href="../../style.css"> 
+</head> 
+<body> 
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1>Cerveceria Lujan</h1>
+    
+    <!-- Sottotitolo o info sul birrificio -->
+    <p style="text-align: center; color: #cbd5e1; margin-top: -20px;">Argentina • Totale etichette: 2</p>
 
-  <title>Cerveceria Lujan</title>
+    <!-- Griglia fotografica delle etichette -->
+    <div class="breweries-grid">
 
-  <link rel="stylesheet" href="../../style.css">
-</head>
+        <!-- Prima Etichetta -->
+        <div class="brewery-card">
+            <img class="brew-logo" src="img/lujan_1.jpg" alt="Cerveceria Lujan 1">
+            <div class="brew-name">Cerveceria Lujan 1</div>
+        </div>
 
-<body>
+    </div>
 
-<h1>Cerveceria Lujan</h1>
+   <!-- POP-UP LIGHTBOX INVISIBILE -->
+    <div id="lightbox" class="lightbox-overlay">
+        <span id="lightbox-close" class="lightbox-close">&times;</span>
+        <!-- Contenitore interno per bloccare i conflitti di clic -->
+        <div class="lightbox-content">
+            <img id="lightbox-img" class="lightbox-img" src="" alt="Ingrandimento Etichetta">
+        </div>
+    </div>
 
-<p>Collezione etichette birra.</p>
+  <!-- NUOVO POP-UP LIGHTBOX (Stabile per PC con Scorrimento) -->
+    <div id="lightbox" class="lightbox-overlay">
+        <span id="lightbox-close" class="lightbox-close">&times;</span>
+        <img id="lightbox-img" class="lightbox-img" src="" alt="Ingrandimento Etichetta">
+    </div>
 
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.getElementById('lightbox-close');
+        
+        // APERTURA: Funziona sempre, ogni volta che clicchi
+        document.querySelectorAll('.brewery-card img').forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightbox.classList.add('active');
+                // NON blocchiamo più l'overflow del body, così se la foto è gigante puoi scorrerla!
+            });
+        });
 
-<script src='../backbutton.js' defer></script>
-</body>
+        // FUNZIONE DI CHIUSURA PULITA
+        function disattivaPopUp() {
+            lightbox.classList.remove('active');
+        }
 
+        // Clicchi sullo sfondo scuro -> Chiude
+        lightbox.addEventListener('click', disattivaPopUp);
+
+        // Clicchi sulla foto grande -> Chiude
+        lightboxImg.addEventListener('click', disattivaPopUp);
+
+        // Clicchi sulla X -> Chiude
+        lightboxClose.addEventListener('click', disattivaPopUp);
+    </script>
+<script src='../../backbutton.js' defer></script>
+    </script>
+</body> 
 </html>
-
-
-
-
