@@ -1,27 +1,107 @@
-<DOCTYPE html>
-<html lang="it">
+<!DOCTYPE html> 
+<html lang="it"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Cerveza Quilmes</title> 
+    <!-- Torniamo indietro di due cartelle per prendere il CSS globale -->
+    <link rel="stylesheet" href="../../style.css"> 
+</head> 
+<body> 
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1>Cerveza Quilmes</h1>
+    
+    <!-- Sottotitolo o info sul birrificio -->
+    <p style="text-align: center; color: #cbd5e1; margin-top: -20px;">Argentina • Totale etichette: 34</p>
 
-  <title>Cerveza Quilmes</title>
+    <!-- Griglia fotografica delle etichette -->
+    <div class="breweries-grid">
 
-  <link rel="stylesheet" href="../../style.css">
-</head>
+        <!-- Prima Etichetta -->
+        <div class="brewery-card">
+            <img class="brew-logo" src="img/quilmes_1.jpg" alt="Quilmes 1">
+            <div class="brew-name">Quilmes 1</div>
+        </div>
+<div class="brewery-card">
+            <img class="brew-logo" src="img/quilmes_2.jpg" alt="Quilmes 2">
+            <div class="brew-name">Quilmes 2</div>
+        </div>
+<div class="brewery-card">
+            <img class="brew-logo" src="img/quilmes_3.jpg" alt="Quilmes 3">
+            <div class="brew-name">Quilmes 3</div>
+        </div>
+<div class="brewery-card">
+            <img class="brew-logo" src="img/quilmes_4.jpg" alt="Quilmes 4">
+            <div class="brew-name">Quilmes 4</div>
+        </div>
+<div class="brewery-card">
+            <img class="brew-logo" src="img/quilmes_5.jpg" alt="Quilmes 5">
+            <div class="brew-name">Quilmes 5</div>
+        </div>
+<div class="brewery-card">
+            <img class="brew-logo" src="img/quilmes_6.jpg" alt="Quilmes 6">
+            <div class="brew-name">Quilmes 6</div>
+        </div>
+<div class="brewery-card">
+            <img class="brew-logo" src="img/quilmes_7.jpg" alt="Quilmes 7">
+            <div class="brew-name">Quilmes 7</div>
+        </div>
+<div class="brewery-card">
+            <img class="brew-logo" src="img/quilmes_8.jpg" alt="Quilmes 8">
+            <div class="brew-name">Quilmes 8</div>
+        </div>
+<div class="brewery-card">
+            <img class="brew-logo" src="img/quilmes_9.jpg" alt="Quilmes 9">
+            <div class="brew-name">Quilmes 6</div>
+        </div>
 
-<body>
 
-<h1>Cerveza Quilmes</h1>
+    </div>
 
-<p>Collezione etichette birra.</p>
+   <!-- POP-UP LIGHTBOX INVISIBILE -->
+    <div id="lightbox" class="lightbox-overlay">
+        <span id="lightbox-close" class="lightbox-close">&times;</span>
+        <!-- Contenitore interno per bloccare i conflitti di clic -->
+        <div class="lightbox-content">
+            <img id="lightbox-img" class="lightbox-img" src="" alt="Ingrandimento Etichetta">
+        </div>
+    </div>
 
+  <!-- NUOVO POP-UP LIGHTBOX (Stabile per PC con Scorrimento) -->
+    <div id="lightbox" class="lightbox-overlay">
+        <span id="lightbox-close" class="lightbox-close">&times;</span>
+        <img id="lightbox-img" class="lightbox-img" src="" alt="Ingrandimento Etichetta">
+    </div>
 
-<script src='../backbutton.js' defer></script>
-</body>
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.getElementById('lightbox-close');
+        
+        // APERTURA: Funziona sempre, ogni volta che clicchi
+        document.querySelectorAll('.brewery-card img').forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightbox.classList.add('active');
+                // NON blocchiamo più l'overflow del body, così se la foto è gigante puoi scorrerla!
+            });
+        });
 
+        // FUNZIONE DI CHIUSURA PULITA
+        function disattivaPopUp() {
+            lightbox.classList.remove('active');
+        }
+
+        // Clicchi sullo sfondo scuro -> Chiude
+        lightbox.addEventListener('click', disattivaPopUp);
+
+        // Clicchi sulla foto grande -> Chiude
+        lightboxImg.addEventListener('click', disattivaPopUp);
+
+        // Clicchi sulla X -> Chiude
+        lightboxClose.addEventListener('click', disattivaPopUp);
+    </script>
+<script src='../../backbutton.js' defer></script>
+    </script>
+</body> 
 </html>
-
-
-
-
