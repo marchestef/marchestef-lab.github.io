@@ -1,27 +1,94 @@
-<DOCTYPE html>
-<html lang="it">
+<!DOCTYPE html> 
+<html lang="it"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Gosser Brauerei</title> 
+    <!-- Torniamo indietro di due cartelle per prendere il CSS globale -->
+    <link rel="stylesheet" href="../../style.css"> 
+</head> 
+<body> 
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1>Gosser Brauerei</h1>
+    
+    <!-- Sottotitolo o info sul birrificio -->
+    <p style="text-align: center; color: #cbd5e1; margin-top: -20px;">Austria • Totale etichette: 19</p>
 
-  <title>Gosser Brauerei </title>
+    <!-- Griglia fotografica delle etichette -->
+    <div class="breweries-grid">
 
-  <link rel="stylesheet" href="../../style.css">
-</head>
+        <!-- Prima Etichetta -->
+        <div class="brewery-card">
+            <img class="brew-logo" src="img/gosser_1.jpg" alt="Gosser Brauerei 1">
+            <div class="brew-name">Gosser Brauerei 1</div>
+        </div>
+<div class="brewery-card">
+            <img class="brew-logo" src="img/gosser_2.jpg" alt="Gosser Brauerei 2">
+            <div class="brew-name">Gosser Brauerei 2</div>
+        </div>
 
-<body>
+<div class="brewery-card">
+            <img class="brew-logo" src="img/gosser_3.jpg" alt="Gosser Brauerei 3">
+            <div class="brew-name">Gosser Brauerei 3</div>
+        </div>
 
-<h1>Gosser Brauerei </h1>
+<div class="brewery-card">
+            <img class="brew-logo" src="img/gosser_4.jpg" alt="Gosser Brauerei 4">
+            <div class="brew-name">Gosser Brauerei 4</div>
+        </div>
 
-<p>Collezione etichette birra.</p>
+<div class="brewery-card">
+            <img class="brew-logo" src="img/gosser_5.jpg" alt="Gosser Brauerei 5">
+            <div class="brew-name">Gosser Brauerei 5</div>
+        </div>
 
 
-<script src='../backbutton.js' defer></script>
-</body>
+    </div>
 
+   <!-- POP-UP LIGHTBOX INVISIBILE -->
+    <div id="lightbox" class="lightbox-overlay">
+        <span id="lightbox-close" class="lightbox-close">&times;</span>
+        <!-- Contenitore interno per bloccare i conflitti di clic -->
+        <div class="lightbox-content">
+            <img id="lightbox-img" class="lightbox-img" src="" alt="Ingrandimento Etichetta">
+        </div>
+    </div>
+
+  <!-- NUOVO POP-UP LIGHTBOX (Stabile per PC con Scorrimento) -->
+    <div id="lightbox" class="lightbox-overlay">
+        <span id="lightbox-close" class="lightbox-close">&times;</span>
+        <img id="lightbox-img" class="lightbox-img" src="" alt="Ingrandimento Etichetta">
+    </div>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.getElementById('lightbox-close');
+        
+        // APERTURA: Funziona sempre, ogni volta che clicchi
+        document.querySelectorAll('.brewery-card img').forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightbox.classList.add('active');
+                // NON blocchiamo più l'overflow del body, così se la foto è gigante puoi scorrerla!
+            });
+        });
+
+        // FUNZIONE DI CHIUSURA PULITA
+        function disattivaPopUp() {
+            lightbox.classList.remove('active');
+        }
+
+        // Clicchi sullo sfondo scuro -> Chiude
+        lightbox.addEventListener('click', disattivaPopUp);
+
+        // Clicchi sulla foto grande -> Chiude
+        lightboxImg.addEventListener('click', disattivaPopUp);
+
+        // Clicchi sulla X -> Chiude
+        lightboxClose.addEventListener('click', disattivaPopUp);
+    </script>
+<script src='../../backbutton.js' defer></script>
+    </script>
+</body> 
 </html>
-
-
-
-
